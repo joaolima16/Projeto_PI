@@ -25,8 +25,8 @@ public class Address implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    private String bairro;
-    private String logradouro;
+    private String neighborhood;
+    private String street;
     private String uf;
 
 }
