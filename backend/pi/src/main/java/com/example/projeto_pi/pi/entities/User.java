@@ -13,9 +13,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -27,9 +25,15 @@ public class User implements Serializable {
     @GeneratedValue(strategy =  GenerationType.IDENTITY)
     private long id;
     
+    @Column(length = 30)
     private String name;
+
+    @Column(unique = true, length = 14)
     private String cpf;
+
+    @Column(unique = true, length = 50)
     private String email;
+    
     private String password;
 
     @Enumerated(EnumType.STRING)

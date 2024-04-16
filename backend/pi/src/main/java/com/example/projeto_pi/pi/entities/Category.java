@@ -1,6 +1,8 @@
 package com.example.projeto_pi.pi.entities;
 
 import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -20,6 +22,13 @@ public class Category  implements Serializable{
 
     private String name;
     
+    private Set<Product> products = new HashSet<>();
+    
+    public Set<Product> getProducts() {
+        return products;
+    }
+
+
     public Category(){
 
     }

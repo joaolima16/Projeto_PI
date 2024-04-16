@@ -29,4 +29,11 @@ public class Address implements Serializable{
     private String street;
     private String uf;
 
+    public Address(String neighborhood, String street, String uf) {
+        this.neighborhood = neighborhood;
+        this.street = street;
+        this.uf = uf;
+    }
+
+    
 }

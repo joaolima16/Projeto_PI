@@ -3,9 +3,7 @@ package com.example.projeto_pi.pi.entities;
 import java.io.Serializable;
 import java.time.Instant;
 
-import com.example.projeto_pi.pi.entities.ENUM.OrderStatus;
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.databind.jsonFormatVisitors.JsonFormatTypes;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
