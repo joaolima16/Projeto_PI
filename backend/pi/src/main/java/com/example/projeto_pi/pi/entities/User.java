@@ -39,7 +39,6 @@ public class User implements Serializable {
     @Enumerated(EnumType.STRING)
     private Gender gender;
 
-    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "id_address")
     private Address id_address;

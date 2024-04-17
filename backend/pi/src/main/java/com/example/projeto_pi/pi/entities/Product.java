@@ -16,7 +16,7 @@ public class Product implements Serializable{
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
     private String name;
     private String description;
     private String imgUrl;
@@ -24,8 +24,15 @@ public class Product implements Serializable{
 
     private Set<Category> categories = new HashSet<>();
 
-    public Product(long id, String name, String description, String imgUrl, double price) {
+    public Product(Long id, String name, String description, String imgUrl, double price) {
         this.id = id;
+        this.name = name;
+        this.description = description;
+        this.imgUrl = imgUrl;
+        this.price = price;
+    }
+    public Product(String name, String description, String imgUrl, double price) {
+      
         this.name = name;
         this.description = description;
         this.imgUrl = imgUrl;

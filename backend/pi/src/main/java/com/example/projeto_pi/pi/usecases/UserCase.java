@@ -1,7 +1,5 @@
 package com.example.projeto_pi.pi.usecases;
 
-import java.util.Optional;
-
 import javax.management.RuntimeErrorException;
 
 import org.springframework.beans.factory.annotation.Autowired;
