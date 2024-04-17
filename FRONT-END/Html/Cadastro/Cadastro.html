@@ -1,53 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Cadastro.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.6/inputmask.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.6/inputmask.extensions.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.6/inputmask.numeric.extensions.min.js"></script>
     <title>Tela de cadastro</title>
 </head>
 
 <body>
+    <script src="./script.js">
+
+
+    </script>
     <h1 class="title_page">Cadastrar usuário</h1>
     <section class="container">
         <div class="row">
             <label class="label" for="nome">Nome</label>
-            <input type="text" class="input_group" name="nome" />
+            <input type="text" class="input_group" name="nome" id="nome"/>
             <label class="label" for="cpf">CPF</label>
-            <input type="text" class="input_group" name="cpf" />
+            <input type="text" class="input_group" name="cpf" id="cpf" maxlength="14" onkeypress="formatarCPF()"/>
         </div>
         <div class="row">
             <label class="label" for="email">Email</label>
-            <input type="email" class="input_group" name="email" />
+            <input type="email" class="input_group" name="email" id="email"/>
             <label class="label" for="senha">Senha</label>
-            <input type="password" class="input_group" name="senha" />
+            <input type="password" class="input_group" name="senha" id="senha"/>
         </div>
         <div class="row">
-            <label for="gender" class="label">Genero</label>
+            <label for="gender" class="label" id="genero">Genero</label>
             <select name="genero" class="input_group">
                 <option value="M">Masculino</option>
                 <option value="F">Feminino</option>
             </select>
             <label class="label" for="cep">CEP</label>
-            <input type="text" class="input_group" name="cep" />
+            <input type="text" class="input_group" name="cep" maxlength="9" id="cep" onkeypress="formatarCEP()" onchange="buscarCEP()"/>
         </div>
         <h2 class="subtitle">Dados de endereço</h2>
         <div class="row">
             <label class="label" for="bairro">Bairro</label>
-            <input type="email" class="input_group" name="bairro" />
-            <label class="label" for="cep">Nº</label>
-            <input type="text" class="input_group"  name="cep" pattern="\d{5}-\d{3}" id="cep" onchange="buscarCEP()" max="9"/>
+            <input type="email" class="input_group" name="bairro" id="bairro" />
+            <label class="label" for="numero">Nº</label>
+            <input type="text" class="input_group" name="numero" id="num"/>
         </div>
         <div class="row">
             <label class="label" for="rua">Rua</label>
-            <input type="email" class="input_group" name="rua" />
+            <input type="email" class="input_group" name="rua" id="rua"/>
             <label class="label" for="uf">UF</label>
-            <input type="text" class="input_group" name="uf" />
+            <input type="text" class="input_group" name="uf" id="uf"/>
         </div>
-        <button type="submit" class="btn_submit">Enviar</button>
+        <button type="submit" class="btn_submit" onclick="cadastrarUsuario()">Enviar</button>
     </section>
-    <script src="script.js"> </script>
+
 </body>
 
 </html>

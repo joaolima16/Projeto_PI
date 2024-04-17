@@ -23,7 +23,6 @@ body{
     justify-content: center;
     gap: 50px;
     flex-wrap: wrap;
-    flex: 1;
 
 }
 .label{
