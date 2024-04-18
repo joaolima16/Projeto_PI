@@ -40,6 +40,39 @@ function buscarCEP(){
             console.log(error)
   })
 }
+
+
+function validarCampos(event){
+  event.preventDefault();
+  const nome = document.getElementById("nome").value;
+  const cpf = document.getElementById("cpf").value;
+  const email = document.getElementById("email").value;
+  const senha = document.getElementById("senha").value;
+  const genero = document.getElementById("genero").value;
+  const bairro = document.getElementById("bairro").value;
+  const numero = document.getElementById("num").value;
+  const rua = document.getElementById("rua");
+  const uf = document.getElementById("uf");
+
+  if(nome.trim() === "" || email.trim() === "" ||  cpf.trim() === "" ||  senha.trim() === ""){
+    alert("Preencha os campos nome, email, senha e cpf!");
+  }
+  else{
+    cadastrarUsuario();
+  }
+}
+
+const mostrarSenha = () =>{
+  const senha = document.getElementById("senha")
+  if(senha.type === "password"){
+    senha.type = "text"
+  }
+  else{
+    senha.type = "password";
+  }
+
+}
+
 const cadastrarUsuario = () =>{
   const url = "http://localhost:8080/user"
 
@@ -72,7 +105,19 @@ const cadastrarUsuario = () =>{
     },
     body: json
     })
-    .then((response)=> response.json())
-    .then((res)=>(console.log(res)))
-    .catch((error)=>console.log(error))
+    .then((response)=>{
+      if(response.ok){
+        alert("Usuário cadastrado com sucesso!");
+        window.location.replace("../index.html");
+
+      }
+      else{
+        alert("Ocorreu um erro ao cadastrar o usuário")
+      }
+      response.json()
+    } )
+    .catch((error)=>{
+      alert("Ocorreu um erro ao cadastrar o usuário")
+      console.log(error)
+    })
 }

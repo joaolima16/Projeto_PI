@@ -5,9 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Cadastro.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.6/inputmask.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.6/inputmask.extensions.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.6/inputmask.numeric.extensions.min.js"></script>
     <title>Tela de cadastro</title>
 </head>
 
@@ -20,19 +17,20 @@
     <section class="container">
         <div class="row">
             <label class="label" for="nome">Nome</label>
-            <input type="text" class="input_group" name="nome" id="nome"/>
+            <input type="text" class="input_group" name="nome" id="nome" maxlength="50"/>
             <label class="label" for="cpf">CPF</label>
             <input type="text" class="input_group" name="cpf" id="cpf" maxlength="14" onkeypress="formatarCPF()"/>
         </div>
         <div class="row">
             <label class="label" for="email">Email</label>
-            <input type="email" class="input_group" name="email" id="email"/>
+            <input type="email" class="input_group" name="email" id="email" maxlength="40"/>
             <label class="label" for="senha">Senha</label>
             <input type="password" class="input_group" name="senha" id="senha"/>
+            <button type="button" class="btn_senha" id="btn_senha" onclick="mostrarSenha()">👁️</button>
         </div>
         <div class="row">
-            <label for="gender" class="label" id="genero">Genero</label>
-            <select name="genero" class="input_group">
+            <label for="gender" class="label">Genero</label>
+            <select name="genero" class="input_group" id="genero">
                 <option value="M">Masculino</option>
                 <option value="F">Feminino</option>
             </select>
@@ -44,15 +42,15 @@
             <label class="label" for="bairro">Bairro</label>
             <input type="email" class="input_group" name="bairro" id="bairro" />
             <label class="label" for="numero">Nº</label>
-            <input type="text" class="input_group" name="numero" id="num"/>
+            <input type="text" class="input_group" name="numero" id="num" maxlength="4"/>
         </div>
         <div class="row">
             <label class="label" for="rua">Rua</label>
-            <input type="email" class="input_group" name="rua" id="rua"/>
+            <input type="email" class="input_group" name="rua" id="rua" />
             <label class="label" for="uf">UF</label>
             <input type="text" class="input_group" name="uf" id="uf"/>
         </div>
-        <button type="submit" class="btn_submit" onclick="cadastrarUsuario()">Enviar</button>
+        <button type="submit" class="btn_submit" onclick="validarCampos(event)">Enviar</button>
     </section>
 
 </body>
