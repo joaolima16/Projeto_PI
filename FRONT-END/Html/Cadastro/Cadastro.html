@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -9,50 +9,45 @@
 </head>
 
 <body>
-    <script src="./script.js">
-
-
-    </script>
     <h1 class="title_page">Cadastrar usuário</h1>
     <section class="container">
         <div class="row">
             <label class="label" for="nome">Nome</label>
-            <input type="text" class="input_group" name="nome" id="nome" maxlength="50"/>
+            <input type="text" class="input_group" name="nome" />
             <label class="label" for="cpf">CPF</label>
-            <input type="text" class="input_group" name="cpf" id="cpf" maxlength="14" onkeypress="formatarCPF()"/>
+            <input type="text" class="input_group" name="cpf" />
         </div>
         <div class="row">
             <label class="label" for="email">Email</label>
-            <input type="email" class="input_group" name="email" id="email" maxlength="40"/>
+            <input type="email" class="input_group" name="email" />
             <label class="label" for="senha">Senha</label>
-            <input type="password" class="input_group" name="senha" id="senha"/>
-            <button type="button" class="btn_senha" id="btn_senha" onclick="mostrarSenha()">👁️</button>
+            <input type="password" class="input_group" name="senha" />
         </div>
         <div class="row">
             <label for="gender" class="label">Genero</label>
-            <select name="genero" class="input_group" id="genero">
+            <select name="genero" class="input_group">
                 <option value="M">Masculino</option>
                 <option value="F">Feminino</option>
             </select>
             <label class="label" for="cep">CEP</label>
-            <input type="text" class="input_group" name="cep" maxlength="9" id="cep" onkeypress="formatarCEP()" onchange="buscarCEP()"/>
+            <input type="text" class="input_group" name="cep" />
         </div>
         <h2 class="subtitle">Dados de endereço</h2>
         <div class="row">
             <label class="label" for="bairro">Bairro</label>
-            <input type="email" class="input_group" name="bairro" id="bairro" />
-            <label class="label" for="numero">Nº</label>
-            <input type="text" class="input_group" name="numero" id="num" maxlength="4"/>
+            <input type="email" class="input_group" name="bairro" />
+            <label class="label" for="cep">Nº</label>
+            <input type="text" class="input_group"  name="cep" pattern="\d{5}-\d{3}" id="cep" onchange="buscarCEP()" max="9"/>
         </div>
         <div class="row">
             <label class="label" for="rua">Rua</label>
-            <input type="email" class="input_group" name="rua" id="rua" />
+            <input type="email" class="input_group" name="rua" />
             <label class="label" for="uf">UF</label>
-            <input type="text" class="input_group" name="uf" id="uf"/>
+            <input type="text" class="input_group" name="uf" />
         </div>
-        <button type="submit" class="btn_submit" onclick="validarCampos(event)">Enviar</button>
+        <button type="submit" class="btn_submit">Enviar</button>
     </section>
-
+    <script src="script.js"> </script>
 </body>
 
 </html>

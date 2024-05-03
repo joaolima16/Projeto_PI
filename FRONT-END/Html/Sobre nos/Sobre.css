@@ -194,7 +194,7 @@ header {
 
 .header .cart-items-container .cart-item h3 {
     font-size: 2rem;
-    color: var(--black);
+    color: var(--white);
     padding-bottom: .5rem;
 }
 
@@ -228,18 +228,18 @@ header {
 .home .content h3{
     font-size: 5rem;
     text-transform: uppercase;
-    color: #fff;
+    color: white;
     font-weight: 1px;
     
 }
 
 .home .content p{
-    font-family: 'Popins' ,sans-serif;
-    font-size: 1.3rem;
+    font-family: sans-serif;
+    font-size: 1.8rem;
     font-weight: bolder;
     line-height: 1.4;
     padding: 1rem 0;
-    color: #fff;
+    color: white;
 }
 
 
@@ -267,13 +267,13 @@ header {
 }
 
 .sobre .row .content h3{
-    font-size: 1.6rem;
-    color: #fff;
+    font-size: 2.5rem;
+    color: white;
 }
 
 .sobre .row .content p{
-    font-size: 1.6rem;
-    color: #ccc;
+    font-size: 1.8rem;
+    color: gray;
     padding: 1rem 0;
     line-height: 1.8;
 }
@@ -304,22 +304,22 @@ header {
 }
 
 .sobre .row-1.content h3{
-    font-size: 1.6rem;
-    color: #fff;
+    font-size: 2.5rem;
+    color: white;
 }
 
 .sobre .row-1 .content p{
-    font-size: 1.6rem;
-    color: #ccc;
+    font-size: 2.3rem;
+    color: gray;
     padding: 1rem 0;
-    line-height: 1.8;
+    line-height: 2.3;
 }
 
 .sobre .row-1 .content p{
-    font-size: 1.6rem;
-    color: #ccc;
-    padding: 1rem 0;
-    line-height: 1.8;
+    font-size: 2.3rem;
+    color: gray;
+    padding: 2rem 0;
+    line-height: 2.3;
 }
 
 .sobre .row-2{
@@ -373,6 +373,9 @@ header {
     line-height: 1.8;
 }
 
+h3{
+    color: white;
+}
 
 
 

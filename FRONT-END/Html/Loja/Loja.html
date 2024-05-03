@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+
     <title>Loja</title>
 
     <link rel="stylesheet" href="Loja.css">
@@ -13,8 +13,8 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body>
-
+<body onload="carregarProdutos()">
+    <script src="script.js"></script>
     <header class="header">
         <!--Logo-->
         <a href="#" class="logo">
@@ -25,7 +25,7 @@
         <nav class="navbar">
             <a href="../index.html" target="_self">Home</a>
             <a href="../Sobre nos/Sobre.html" target="_self">Saiba Mais</a>
-            <a href="../Loja/Loja.html" target="_self">Loja</a>
+            <a href="Loja.html" target="_self">Loja</a>
             <a href="#Cadastrar" target="_self">Register </a>
             <a href="#Login" target="_self">Login </a>
 
@@ -90,82 +90,47 @@
 
     <!--Menu Shop-->
     <section class="menu" id="menu">
+        <div class="slider">
+            <div class="list">
+                <div class="item">
+                    <img src="../img/pcs/51C9M7zl-5L._AC_SX679_-removebg-preview.png" alt="">
+                </div>
 
+                <div class="item">
+                    <img src="../img/pcs/61vtqwiaSXL._AC_SX679_-removebg-preview (1).png" alt="">
+                </div>
+
+
+                <div class="item">
+                    <img src="../img/pcs/71k-jVHZNuL._AC_SX679_-removebg-preview.png" alt="">
+                </div>
+
+
+                <div class="item">
+                    <img src="../img/pcs/pc-gamer-dos-sonhos-amd-ryzen-7-5800x-nvidia-geforce-rtx-3060-32gb-ddr4-ssd-480gb_174381-removebg-preview.png"
+                        alt="">
+                </div>
+
+                <!--Button de mudar-->
+
+                <div class="buttons">
+                    <button id="anterior">
+                        << /button>
+                            <button id="prox">></button>
+                </div>
+
+                <ul class="dots">
+                    <li class="ativo"> </li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+
+            </div>
+        </div>
         <h1 class="heading"> <span>Store</span></h1>
-        <div class="box-container">
-            <div class="box">
-                <h3>PC GAMER</h3>
-                <img src="../img/pcs/51C9M7zl-5L._AC_SX679_-removebg-preview.png" alt="">
-                <div class="price">1300R$ <span> 1000.00R$</span></div>
-                <a href="#" class="btn"> ADQUIRE</a>
-            </div>
-            <div class="box">
-                <h3>PC GAMER</h3>
-                <img src="../img/pcs/61vtqwiaSXL._AC_SX679_-removebg-preview (1).png" alt="">
-                <div class="price">1300R$ <span> 1000.00R$</span></div>
-                <a href="#" class="btn"> ADQUIRE</a>
-            </div>
-
-            <div class="box">
-                <h3>PC GAMER</h3>
-                <img src="../img/pcs/61XJEwvCL8L._AC_SX679_-removebg-preview.png" alt="">
-                <div class="price">1300R$ <span> 1000.00R$</span></div>
-                <a href="#" class="btn"> ADQUIRE</a>
-            </div>
-
-            <div class="box">
-                <h3>PC GAMER</h3>
-                <img src="../img/pcs/71k-jVHZNuL._AC_SX679_-removebg-preview.png" alt="">
-                <div class="price">1300R$ <span> 1000.00R$</span></div>
-                <a href="#" class="btn"> ADQUIRE</a>
-            </div>
-            <div class="box">
-                <h3>PC GAMER</h3>
-                <img src="../img/pcs/pc-gamer-dos-sonhos-amd-ryzen-7-5800x-nvidia-geforce-rtx-3060-32gb-ddr4-ssd-480gb_174381-removebg-preview.png"
-                    alt="">
-                <div class="price">1300R$ <span> 1000.00R$</span></div>
-                <a href="#" class="btn"> ADQUIRE</a>
-            </div>
-
-            <div class="box">
-                <h3>PC GAMER</h3>
-                <img src="../img/pcs/pc-gamer-dos-sonhos-amd-ryzen-7-5800x-nvidia-geforce-rtx-3060-32gb-ddr4-ssd-480gb_174381-removebg-preview.png"
-                    alt="">
-                <div class="price">1300R$ <span> 1000.00R$</span></div>
-                <a href="#" class="btn"> ADQUIRE</a>
-            </div>
-
-            <div class="box">
-                <h3>PC GAMER</h3>
-                <img src="../img/pcs/pc-gamer-dos-sonhos-amd-ryzen-7-5800x-nvidia-geforce-rtx-3060-32gb-ddr4-ssd-480gb_174381-removebg-preview.png"
-                    alt="">
-                <div class="price">1300R$ <span> 1000.00R$</span></div>
-                <a href="#" class="btn"> ADQUIRE</a>
-            </div>
-
-            <div class="box">
-                <h3>PC GAMER</h3>
-                <img src="../img/pcs/pc-gamer-dos-sonhos-amd-ryzen-7-5800x-nvidia-geforce-rtx-3060-32gb-ddr4-ssd-480gb_174381-removebg-preview.png"
-                    alt="">
-                <div class="price">1300R$ <span> 1000.00R$</span></div>
-                <a href="#" class="btn"> ADQUIRE</a>
-            </div>
-
-            <div class="box">
-                <h3>PC GAMER</h3>
-                <img src="../img/pcs/pc-gamer-dos-sonhos-amd-ryzen-7-5800x-nvidia-geforce-rtx-3060-32gb-ddr4-ssd-480gb_174381-removebg-preview.png"
-                    alt="">
-                <div class="price">1300R$ <span> 1000.00R$</span></div>
-                <a href="#" class="btn"> ADQUIRE</a>
-            </div>
-
-            <div class="box">
-                <h3>PC GAMER</h3>
-                <img src="../img/pcs/pc-gamer-dos-sonhos-amd-ryzen-7-5800x-nvidia-geforce-rtx-3060-32gb-ddr4-ssd-480gb_174381-removebg-preview.png"
-                    alt="">
-                <div class="price">1300R$ <span> 1000.00R$</span></div>
-                <a href="#" class="btn"> ADQUIRE</a>
-            </div>
+        <div class="box-container" id="box-container">
 
 
         </div>
@@ -177,38 +142,39 @@
 
     <!--Incinado o produtos na loja-->
     <section class="produtos" id="produtos">
-        <h1 class="heading">
-            <span>produtos</span>
-        </h1>
+        <h1 class="heading"> News <span>produtos</span> </h1>
 
-        <div class="box-container">
-            <div class="box">
-                <img src="../img/pcs/51C9M7zl-5L._AC_SX679_-removebg-preview.png" alt="">
-                <div class="icons">
-                    <a href="#" class="fas fa-shopping-cart"></a>
-                    <a href="#" class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-eye"></a>
-                </div>
-            </div>
-            <div class="imagens">
-                
-            </div>
-            <div class="content">
+        <div class="box-container" id="box_bestProducts">
 
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                <h3>Melhores Computadores gamer</h3>
-                <div class="price">1300R$ <span> 1500R$</span></div>
-            </div>
+        </div>
+
+
+
         </div>
     </section>
     <!--Finalizado o produtos na loja-->
+
+
+
+    <section class="footer">
+
+        <div class="icon-redes">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-twitch"></a>
+            <a href="#" class="fab fa-instagram"></a>
+        </div>
+
+        <div class="links-conctato">
+            <a href="#home">Home</a>
+            <a href="#SaibaMAIS">Sobre Mais</a>
+            <a href="#menu">Produtos</a>
+            <a href="../Html/Loja/Loja.html">Loja</a>
+            <a href="#Cadastro"></a>
+        </div>
+    </section>
     <script src="../script.js"></script>
+    <script src="Loja.js"></script>
 
 
 </body>
