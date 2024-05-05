@@ -1,5 +1,7 @@
 package com.example.projeto_pi.pi.usecases;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,8 +20,8 @@ public class AddressCase {
         return address;
     }
 
-    public Address insertAddress(Address address) {
-        addressRepository.save(address);
-        return address;
+    public Address insertAddress(Address list) {
+        addressRepository.save(list);
+        return list;
     }
 }

@@ -2,7 +2,6 @@ package com.example.projeto_pi.pi.Controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,7 +24,7 @@ public class UserController {
 
     @PostMapping
     public ResponseEntity<User> createUser(@RequestBody User user) {
-        addressCase.insertAddress(user.getId_address());
+        addressCase.insertAddress(user.getId_address().get(0));
         userCase.createUser(user);
         return ResponseEntity.ok().body(user);
     }
