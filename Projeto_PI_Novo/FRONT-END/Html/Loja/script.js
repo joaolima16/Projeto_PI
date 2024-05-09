@@ -1,3 +1,5 @@
+var itensCart = [];
+
 async function carregarProdutos(){
     const divContainer = document.getElementById("box-container");
     const divSecondaryProducts = document.getElementById("box_bestProducts");
@@ -8,13 +10,14 @@ async function carregarProdutos(){
         .then((res) => arrProducts = res)
         .catch((error) => console.log(error))
 
-    arrProducts.map(({id, name, price, imgUrl})=>{
+    arrProducts.map(({name, imgUrl, price, id})=>{
+      
         divContainer.innerHTML += `
         <div class="box">
             <h3>${name}</h3>
             <img src="${imgUrl}" alt="" class="img_products">
             <div class="price">R$ ${price}</div>
-            <a key="${id}"href="#" class="btn"> ADQUIRE</a>
+            <button onclick="adicionarAoCarrinho(${id})"><a key="${id}"href="#" class="btn"> ADICIONAR AO CARRINHO</a></button>
         </div>
         `
     })
@@ -47,4 +50,49 @@ async function carregarProdutos(){
         `
     }
 
+}
+async function adicionarAoCarrinho(id){
+    
+    var url = `http://localhost:8080/product/${id}`
+    await fetch(url)
+        .then((res) => res.json())
+        .then((response) =>{
+            itensCart.push(response)
+            recarregarCarrinho(response);
+        
+        })
+        .catch((err) => {console.error(err)})
+}
+
+async function removerDoCarrinho(id){
+    itensCart.forEach((index) =>{
+        var cont = 0;
+        if(index.id == id){
+           itensCart.splice(cont, 1);
+           recarregarCarrinho();
+        }
+        cont++;
+    })
+}
+async function recarregarCarrinho(){
+    var divList = document.querySelector(".cart-items-container")
+    divList.innerHTML  ="" ;
+    itensCart.forEach((item)=>{
+        divList.innerHTML +=`
+        <div class="cart-item">
+        <span class="fas fa-times" onclick="removerDoCarrinho(${item.id})"></span>
+     
+        <div class="content">
+            <h3>${item.name} </h3>
+            <div class="price"> R$ ${item.price}</div>
+        </div>
+        </div>
+        `
+       
+        
+    })
+    divList.innerHTML +=  `<a class="btn" onclick="redirecionar()"> Finalizar Carrinho </a> </a>`
+}
+async function redirecionar(){
+    window.location.href = "../Carrinho/Carrinho.html"
 }
