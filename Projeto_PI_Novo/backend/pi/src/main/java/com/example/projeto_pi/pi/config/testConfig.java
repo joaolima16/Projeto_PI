@@ -45,9 +45,9 @@
 //         Address a2 = new Address(null,"Bairro do jandira", "test1", "BA");
 //         Address a3 = new Address(null,"Bairro do limoeiro", "teste3", "ES");
 
-//         User u1 = new User("João", "1313167", "joao@teste.com", "1234", Gender.M, a1);
-//         User u2 = new User("Jose", "08718787", "jose@gmail.com", "13578", Gender.M, a2);
-//         User u3 = new User("Roberta", "877146778", "roberta@teste.com", "1234", Gender.F, a3);
+//         User u1 = new User(null,"João", "1313167", "joao@teste.com", "1234", Gender.M);
+//         User u2 = new User(null,"Jose", "08718787", "jose@gmail.com", "13578", Gender.M);
+//         User u3 = new User(null, "Roberta", "877146778", "roberta@teste.com", "1234", Gender.F);
 
 //         addressRepository.saveAll(Arrays.asList(a1, a2, a3));
 //         userRepository.saveAll(Arrays.asList(u1, u2, u3));

@@ -37,4 +37,13 @@ public class Address implements Serializable {
     @JoinColumn(name = "user_id")
     private User user;
 
+    public Address(Long id, String neighborhood, String street, String uf) {
+        this.id = id;
+        this.neighborhood = neighborhood;
+        this.street = street;
+        this.uf = uf;
+    }
+
+    
+
 }

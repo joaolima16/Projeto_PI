@@ -12,8 +12,6 @@ import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
@@ -31,6 +29,16 @@ import lombok.Setter;
 @Setter
 public class User implements Serializable {
     private final static long serialVersionUID = 1L;
+
+    
+    public User(Long id, String name, String cpf, String email, String password, Gender gender) {
+        this.id = id;
+        this.name = name;
+        this.cpf = cpf;
+        this.email = email;
+        this.password = password;
+        this.gender = gender;
+    }
 
     @Id
     @GeneratedValue(strategy =  GenerationType.IDENTITY)
