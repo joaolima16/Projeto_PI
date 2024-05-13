@@ -94,5 +94,7 @@ async function recarregarCarrinho(){
     divList.innerHTML +=  `<a class="btn" onclick="redirecionar()"> Finalizar Carrinho </a> </a>`
 }
 async function redirecionar(){
-    window.location.href = "../Carrinho/Carrinho.html"
+    var json = JSON.stringify(itensCart)
+    localStorage.setItem("produtos",json)
+    window.location.href = `../Carrinho/Carrinho.html?array=${json}`
 }

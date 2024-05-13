@@ -34,7 +34,10 @@ html::-webkit-scrollbar-track {
     background-color: #fff;
     border-radius: 5rem;
 }
-
+.img{
+  width: 100px;
+  height: auto;
+}
 
 .headerTopo{
     background: var(--bg);
