@@ -88,8 +88,7 @@ async function recarregarCarrinho(){
         </div>
         </div>
         `
-       
-        
+ 
     })
     divList.innerHTML +=  `<a class="btn" onclick="redirecionar()"> Finalizar Carrinho </a> </a>`
 }
