@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registre</title>
+    <link rel="stylesheet" href="Registro.css">
+</head>
+
+<body>
+    <script src="script.js"></script>
+    <div class="box">
+        <span class="bordeLine"></span>
+        <form>
+            <h2>Sign up</h2>
+            <div class="inputBox">
+                <input type="text" required="required" id="nome">
+                <span>Nome</span>
+
+                <i></i>
+
+            </div>
+
+
+            <div class="inputBoxCpf">
+                <input type="text" required="required" id="cpf" onkeypress="formatarCPF()" maxlength="14">
+                <span>CPF</span>
+
+                <i></i>
+
+            </div>
+
+            <div class="inputBox">
+                <input type="text" required="required" id="cep" onkeypress="formatarCEP()" maxlength="9"
+                    onchange="buscarCEP()">
+                <span>CEP</span>
+                <i></i>
+            </div>
+
+
+            <div class="inputBoxBarriro">
+
+                <input type="text" required="required" id="bairro">
+                <span>Bairro</span>
+                <i></i>
+            </div>
+
+            <div class="inputBox">
+
+                <input type="text" required="required" id="rua">
+                <span>Rua</span>
+                <i></i>
+            </div>
+            <div class="inputBoxUF">
+
+                <input type="text" required="required" id="uf">
+                <span>UF</span>
+                <i></i>
+            </div>
+
+
+            <div class="inputBox">
+                <input type="email" required="required" id="email">
+                <span>E-mail</span>
+                <i></i>
+            </div>
+            <div class="inputBoxPassoword">
+                <input type="Password" required="required" id="senha">
+                <span>Password</span>
+                <i></i>
+            </div>
+
+            <div class="links">
+                <a href="../Login/Login.html">Já tem registro</a>
+            </div>
+            <input type="submit" value="Register" onclick="validarCampos(event)">
+        </form>
+    </div>
+</body>
+
+</html>
