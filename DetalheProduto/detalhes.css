@@ -14,7 +14,7 @@
     border: none;
     text-decoration: none;
     text-transform: capitalize;
-    transition: .2s linear;
+    color: #fff;
 }
 
 html {
@@ -60,9 +60,6 @@ body {
     cursor: pointer;
 }
 
-.btn:hover {
-    letter-spacing: .2rem;
-}
 
 
 header {
@@ -213,7 +210,7 @@ header {
     align-items: center;
     width: 100%;
     height: calc(100vh - 85px);
-    gap: 10px;
+    gap: 40px;
 }
 
 
@@ -260,12 +257,16 @@ header {
     max-width: 400px;
     display: flex;
     flex-direction: column;
+    gap: 30px;
+    position: relative;
+    top: 30px;
 }
 
 .right-side{
     width: 100%;
     display: flex;
     flex-direction: column;
+    gap: 5px;
 }
 
 .right-side h6{
@@ -273,43 +274,57 @@ header {
 
 }
 
-.right-side h1{
-    color: beige;
-
-}
-
-.right-side p{
-    color: beige;
-    font-size: 15px;
-
-}
 
 .prices{
     display: flex;
     flex-direction: column;
+    gap: 15px;
 }
 .price{
     font-size: 16px;
     margin-top: 10px;
+    font-size: 3rem;
+    font-weight: bold;
+    font-style: italic;
+    
 }
 .off{
     font-size: 12px;
     color: #ccc;
 }
 
-
-.buttn button{
+.quantity{
+    font-size: 2rem;
+}
+.btnSubmit{
     display: inline-block;
     background:orange ;
     color: white;
     align-items: center;
     justify-content: center;
-    width: 300px;
-    height: 50px;
+    width: 340px;
+    height: 70px;
     border-radius: 5px;
     display: flex;
     gap: 5px;
+    position: relative;
+    top: 140px;
+    cursor: pointer;
+    font-size: 20px;
+    font-style: italic;
 
+
+}
+.btnSubmit:hover{
+    transition: .5s ease-in-out;
+    width: 350px;
+    height: 75px;
+
+}
+.name_product{
+    font-size: 3.5rem;
+    font-weight: bold;
+    font-style: italic;
 
 }
 
