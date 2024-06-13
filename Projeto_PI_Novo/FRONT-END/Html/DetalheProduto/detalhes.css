@@ -1,0 +1,375 @@
+:root {
+    --main-color: #7c7ddf;
+    --black: #13131a;
+    --bg: #010103;
+    --border: .1rem solid(225, 255, 255, 3);
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: #fff;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding: 9rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+    background: transparent;
+}
+
+html::-webkit-scrollbar-track {
+    background-color: #fff;
+    border-radius: 5rem;
+}
+
+body {
+    background: var(--bg);
+}
+
+.info{
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    padding-bottom:3.5rem;
+    font-size: 4rem;
+}
+
+.info span{
+    color: var(--main-color);
+    text-transform: uppercase;
+}
+
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .7rem 3rem;
+    font-size: 1.7rem;
+    color: #fff;
+    background: var(--main-color);
+    cursor: pointer;
+}
+
+
+
+header {
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 7%;
+    border-bottom: var(--border);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.header .logo img {
+    height: 6rem;
+}
+
+.header .navbar a {
+    margin: 0 1rem;
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+.header .navbar a:hover {
+    color: var(--main-color);
+    border-bottom: .1rem solid var(--main-color);
+    padding-bottom: .5rem;
+}
+
+
+.header .icons div {
+    color: #fff;
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+}
+
+.header .icons div:hover {
+    color: var(--main-color);
+}
+
+#menu-btn {
+    display: none;
+}
+
+.header .search-form {
+    position: absolute;
+    top: 155%;
+    right: 7%;
+    background: #fff;
+    width: 50rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    transform: scaleY(0);
+    transform-origin: top;
+}
+
+.header .search-form.active{
+    transform: scaleY(1);
+}
+
+
+
+.header .search-form input {
+    height: 100%;
+    width: 100%;
+    font-size: 1.6rem;
+    color: var(--black);
+    padding: 1rem;
+    text-transform: none;
+
+}
+
+.header .search-form label {
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin-right: 1.5rem;
+    color: var(--black);
+}
+
+.header .search-form label:hover {
+    color: var(--main-color);
+}
+
+.header .cart-items-container {
+    position: absolute;
+    top: 100%; right: -100%;
+    height: calc(100vh - 9.5rem);
+    width: 35rem;
+    background: #fff;
+    padding: 0 1.5rem;
+}
+
+.header .cart-items-container.active{
+    right: 0;
+}
+
+.header .cart-items-container .cart-item {
+    position: relative;
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.header .cart-items-container .cart-item .fa-times {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--black);
+}
+
+.header .cart-items-container .cart-item .fa-times:hover {
+    color: var(--main-color);
+}
+
+.header .cart-items-container .cart-item img {
+    height: 7rem;
+}
+
+.header .cart-items-container .cart-item h3 {
+    font-size: 2rem;
+    color: var(--black);
+    padding-bottom: .5rem;
+}
+
+.header .cart-items-container .cart-item .price {
+    font-size: 1rem;
+    color: var(--main-color);
+
+}
+
+.header .cart-items-container .btn{
+    width: 100%;
+    text-align: center;
+}
+
+
+.containerDetalhes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: calc(100vh - 85px);
+    gap: 30px;
+}
+
+
+
+.left-side {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.itemsDetalhes{
+    align-self: flex-end;
+}
+ .select-imagens{
+    max-width: 400px;
+}
+
+
+.select-imagens img{
+    width: 400px;
+    border-radius: 10px;
+    background: white;
+    margin-top: 210px;
+    
+}
+
+.imagensDetalhes{
+  display: flex;
+  justify-content: space-evenly;
+  max-width: 400px;
+  gap: 10px;
+}
+
+.imagen img{
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 10px;
+    background: white;
+}
+
+.contentItens{
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    position: relative;
+    top: 30px;
+}
+
+.right-side{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.right-side h6{
+    color: beige;
+
+}
+
+
+.prices{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.price{
+    font-size: 16px;
+    margin-top: 10px;
+    font-size: 3rem;
+    font-weight: bold;
+    font-style: italic;
+    
+}
+.off{
+    font-size: 12px;
+    color: #ccc;
+}
+
+.description{
+    font-size: 2rem;
+}
+.btnSubmit{
+    display: inline-block;
+    background:orange ;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    width: 340px;
+    height: 70px;
+    border-radius: 5px;
+    display: flex;
+    gap: 5px;
+    position: relative;
+    top: 46px;
+    cursor: pointer;
+    font-size: 20px;
+    font-style: italic;
+
+
+}
+.btnSubmit:hover{
+    transition: .5s ease-in-out;
+    width: 350px;
+    height: 75px;
+
+}
+.name_product{
+    font-size: 3.5rem;
+    font-weight: bold;
+    font-style: italic;
+
+}
+
+.footer{
+    margin-top: 100px;
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 0%, rgba(247, 255, 254, 0.864) 100%);
+    text-align: center;
+}
+
+.footer .icon-redes{
+    padding: 1rem 0;
+}
+
+.footer .icon-redes a{
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    color: #fff;
+    border: var(--border);
+    margin: .3rem;
+    border-radius: 50%;
+}
+
+.footer .icon-redes a:hover{
+    color: var(--main-color);
+}
+
+.footer .links-conctato{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    gap: 1rem;
+}
+
+.footer .links-conctato a{
+    padding: .7rem 2rem;
+    color: #fff;
+    border: var(--border);
+    font-size: 2rem;
+}
+
+.footer .links-conctato a:hover{
+    background: var(--main-color);
+}
+
+

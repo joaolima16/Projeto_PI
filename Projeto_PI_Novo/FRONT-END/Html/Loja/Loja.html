@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Loja</title>
+
+    <link rel="stylesheet" href="Loja.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body onload="carregarProdutos()">
+
+    <header class="header">
+        <!--Logo-->
+        <a href="#" class="logo">
+            <img src="../img/image1_0-removebg-preview.png" alt="">
+        </a>
+
+        <!--Iniciando os icones na tela-->
+        <nav class="navbar">
+            <a href="../index.html" target="_self">Home</a>
+            <a href="../Sobre nos/Sobre.html" target="_self">Saiba Mais</a>
+            <a href="Loja.html" target="_self">Loja</a>
+            <a href="../Cadastro/Registro.html" target="_self">Cadastro </a>
+
+        </nav>
+        <div class="icons">
+            <div class="fas fa-search" id="search-btn"></div>
+            <div class="fas fa-shopping-cart" id="cart-btn"></div>
+            <a href="../Login/Login.html" tar><div class="fas fa-user" id="user-btn"></div></a>
+            <div class="fas fa-bars" id="menu-btn"></div>
+
+        </div>
+        <!--Fim dos icones na tela-->
+
+        <!--CAMPO DE BUSCA-->
+        <div class="search-form">
+            <input type="search" id="search-box" placeholder="Busca aqui">
+            <label for="search-box" class="fas fa-search"></label>
+        </div>
+        <!--FIM DO CAMPO DE BUSCA-->
+
+        <!--incio de items no carrinho -->
+        <div class="cart-items-container">
+            <p>teste</p>
+        </div>
+
+        <!--incio de items no carrinho -->
+
+    </header>
+    <!--Fim do topo header-->
+
+    <!--Menu Shop-->
+    <section class="menu" id="menu">
+
+        <!--Slider-->
+        <div class="slider">
+
+            <!--Slides-->
+            <div class="slides">
+                <!--Radio Buttons-->
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <input type="radio" name="radio-btn" id="radio4">
+                <!--Fim Radio Buttons-->
+
+                <!--Slide Image-->
+                <div class="slide first">
+                    <img src="../img/pcs/61vtqwiaSXL._AC_SX679_-removebg-preview (1).png" alt="imagem 1">
+                </div>
+
+                <div class="slide">
+                    <img src="../img/pcs/61XJEwvCL8L._AC_SX679_-removebg-preview.png" alt="imagem 2">
+                </div>
+
+                <div class="slide">
+                    <img src="../img/pcs/71k-jVHZNuL._AC_SX679_-removebg-preview.png" alt="imagem 4">
+                </div>
+
+                <div class="slide">
+                    <img src="../img/pcs/pc-gamer-dos-sonhos-amd-ryzen-7-5800x-nvidia-geforce-rtx-3060-32gb-ddr4-ssd-480gb_174381-removebg-preview.png"
+                        alt="imagem 4">
+                </div>
+                <!--Fim Slide Image-->
+
+                <!--Navigation-->
+                <div class="navigation-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                    <div class="auto-btn4"></div>
+                </div>
+                <!--Fim Navigation-->
+
+            </div>
+            <!--Slides-->
+
+            <div class="manual-navigation">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+            </div>
+
+        </div>
+        <!--Fim Slider-->
+        <h1 class="heading"> <span>Store</span></h1>
+        <div class="box-container" id="box-container">
+
+
+        </div>
+
+
+        </div>
+    </section>
+    <!--Fim menu SHOP-->
+
+    <!--Incinado o produtos na loja-->
+    <section class="produtos" id="produtos">
+        <h1 class="heading"> News <span>produtos</span> </h1>
+
+        <div class="box-container" id="box_bestProducts">
+
+        </div>
+
+
+
+        </div>
+    </section>
+    <!--Finalizado o produtos na loja-->
+
+
+
+    <section class="footer">
+
+        <div class="icon-redes">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-twitch"></a>
+            <a href="#" class="fab fa-instagram"></a>
+        </div>
+
+        <div class="links-conctato">
+            <a href="#home">Home</a>
+            <a href="#SaibaMAIS">Sobre Mais</a>
+            <a href="#menu">Produtos</a>
+            <a href="../Html/Loja/Loja.html">Loja</a>
+            <a href="#Cadastro"></a>
+        </div>
+    </section>
+    <script src="script.js"></script>
+
+
+</body>
+
+
+
+</html>
